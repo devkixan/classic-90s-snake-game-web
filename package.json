@@ -1,0 +1,14 @@
+{
+  "name": "classic-90s-snake-game-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "mkdir -p assets && tailwindcss -i src/style.css -o assets/styles.css --minify && cp node_modules/alpinejs/dist/cdn.min.js assets/alpine.min.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0",
+    "alpinejs": "^3.14.0"
+  }
+}
