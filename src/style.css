@@ -1,14 +1,166 @@
 @import 'tailwindcss';
 
+/* URLs resolve from the built file in assets/, so fonts sit in assets/fonts. */
+@font-face {
+  font-family: 'Teko';
+  src: url('./fonts/Teko-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --game-background: #d6c66a;
+  --game-foreground: #231f12;
+}
+
 @theme {
   --color-snake-screen: #d6c66a;
   --color-snake-ink: #231f12;
   --color-snake-shell: #1e2126;
+  --font-game-display: 'Teko', Arial, Helvetica, sans-serif;
+  --font-paragraph: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 @layer base {
   :focus-visible {
     outline: 3px solid currentColor;
     outline-offset: 4px;
+  }
+}
+
+/* Page frame: LCD panel on the device shell, full-bleed on phones. */
+@utility page {
+  @apply m-0 bg-(--game-background) text-(--game-foreground) sm:bg-snake-shell sm:px-6 sm:py-8;
+}
+
+@utility page-panel {
+  @apply mx-auto box-border min-h-dvh bg-(--game-background) px-2.5 pb-6 sm:min-h-0 sm:max-w-180 sm:border-4 sm:border-(--game-foreground) sm:px-6 sm:pb-8;
+}
+
+/* Matches the in-app settings header. */
+@utility page-header {
+  @apply sticky top-0 z-10 -mx-2.5 mb-4 grid min-h-10 grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center border-b-2 border-(--game-foreground) bg-(--game-background) px-2.5 pt-2 pb-2 sm:-mx-6 sm:px-6;
+}
+
+@utility page-title {
+  @apply col-start-2 m-0 whitespace-nowrap text-center text-2xl font-normal uppercase tracking-wider;
+  font-family: var(--font-game-display);
+}
+
+@utility page-header-value {
+  @apply col-start-3 m-0 justify-self-end whitespace-nowrap text-lg uppercase tracking-wider opacity-70;
+  font-family: var(--font-game-display);
+}
+
+/* Guide (same parts as the in-app About screen) */
+@utility guide {
+  @apply flex flex-col gap-4;
+}
+
+/* Opens like a menu row: same frame, type and hatch. */
+@utility guide-goal {
+  @apply relative isolate m-0 overflow-hidden border-[3px] border-(--game-foreground) px-4 py-3 text-xl font-medium uppercase tracking-wider;
+  font-family: var(--font-game-display);
+
+  &::before {
+    content: '';
+    @apply pointer-events-none absolute inset-y-0 right-0 -z-10 w-2/5 opacity-40;
+    background: repeating-linear-gradient(
+      135deg,
+      transparent 0 5px,
+      currentColor 5px 6px
+    );
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 85%);
+    mask-image: linear-gradient(to right, transparent, #000 85%);
+  }
+}
+
+@utility guide-card {
+  @apply m-0 border-[3px] border-(--game-foreground);
+}
+
+/* Inverted bar, like a cartridge label. */
+@utility guide-card-title {
+  @apply m-0 flex items-center justify-between gap-2 bg-(--game-foreground) px-4 py-1 text-xl font-medium uppercase tracking-wider whitespace-nowrap text-(--game-background);
+  font-family: var(--font-game-display);
+}
+
+@utility guide-card-index {
+  @apply text-lg font-normal;
+}
+
+@utility guide-rows {
+  @apply m-0 flex list-none flex-col p-0;
+}
+
+@utility guide-row {
+  @apply flex flex-col gap-1 px-4 py-3;
+
+  & + & {
+    @apply border-t-2 border-dashed border-(--game-foreground);
+  }
+}
+
+@utility guide-row-head {
+  @apply m-0 flex items-center justify-between gap-2 text-lg font-normal leading-6 uppercase tracking-wider;
+  font-family: var(--font-game-display);
+}
+
+@utility guide-row-value {
+  @apply whitespace-nowrap opacity-70;
+}
+
+@utility guide-row-text {
+  @apply m-0 text-base font-light leading-6;
+  font-family: var(--font-paragraph);
+
+  & strong {
+    @apply font-normal;
+  }
+
+  & a {
+    @apply font-normal text-(--game-foreground) underline underline-offset-2;
+  }
+}
+
+/* Outbound link row: same type and inverted press state as menu rows. */
+@utility guide-link {
+  @apply flex w-full cursor-pointer items-center justify-between gap-2 border-0 border-t-[3px] border-(--game-foreground) bg-transparent px-4 py-3 text-left text-xl font-medium uppercase tracking-wider text-(--game-foreground) no-underline;
+  font-family: var(--font-game-display);
+
+  & svg {
+    @apply size-4 shrink-0;
+  }
+
+  &:active {
+    @apply bg-(--game-foreground) text-(--game-background);
+  }
+
+  /* Inverted, so the ring uses the background colour inside the frame. */
+  &:focus-visible {
+    @apply bg-(--game-foreground) text-(--game-background) outline-2 -outline-offset-4 outline-(--game-background);
+  }
+}
+
+@media (hover: hover) {
+  .guide-link:hover {
+    @apply bg-(--game-foreground) text-(--game-background);
   }
 }

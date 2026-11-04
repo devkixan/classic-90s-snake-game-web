@@ -6,135 +6,307 @@
     <meta name="theme-color" content="#1e2126" />
     <meta name="description" content="Privacy Policy for Classic 90s Snake Game" />
     <title>Privacy Policy — Classic 90s Snake Game</title>
+    <link rel="preload" href="assets/fonts/Teko-Variable.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="assets/styles.css" />
     <script defer src="assets/alpine.min.js"></script>
   </head>
-  <body class="m-0 bg-snake-screen font-sans text-snake-ink sm:bg-snake-shell sm:px-6 sm:py-8">
-    <main x-data="{ copied: false }" class="mx-auto box-border bg-snake-screen p-6 leading-relaxed sm:max-w-180 sm:border-4 sm:border-snake-ink sm:p-10">
-      <h1 class="m-0 text-3xl font-bold leading-tight sm:text-4xl">Privacy Policy</h1>
-      <p class="mb-7 text-sm">Last updated: November 1, 2026</p>
+  <body class="page">
+    <main x-data="{ copied: false }" class="page-panel">
+      <header class="page-header">
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="page-header-value">v1.0</p>
+      </header>
 
-      <p>
-        This Privacy Policy explains how Classic 90s Snake Game (the “app”)
-        handles information. The app is developed by Dev Kixan. The game is
-        designed for offline play: it does not require an account and does not
-        ask you to provide your name, email address, phone number, precise
-        location, or payment information to play.
-      </p>
+      <article class="guide" aria-label="Privacy Policy">
+        <p class="guide-goal">Classic 90s Snake</p>
 
-      <section>
-        <h2 class="mt-8 border-t-2 border-snake-ink pt-4 text-2xl font-bold leading-tight">Information stored on your device</h2>
-        <p>
-          The app saves gameplay preferences, unlocked themes and filters, sound
-          and vibration choices, selected game settings, and high scores locally
-          on your device. This information is used only to remember your choices
-          and game progress. We do not receive this local game information on
-          our servers.
-        </p>
-        <p>
-          You can remove this information by clearing the app&rsquo;s data or
-          uninstalling it. For a browser version, clear the site data in your
-          browser. This may reset your saved preferences, unlocked items, and
-          scores.
-        </p>
-      </section>
+        <section class="guide-card" aria-labelledby="privacy-overview">
+          <h2 id="privacy-overview" class="guide-card-title">
+            Overview <span class="guide-card-index" aria-hidden="true">01</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-text">
+                This Privacy Policy explains how Classic 90s Snake Game (the
+                &ldquo;app&rdquo;) handles information. The game is designed for
+                offline play: it does not require an account and does not ask
+                you to provide your name, email address, phone number, precise
+                location, or payment information to play.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head">
+                <span>Developer</span>
+                <span class="guide-row-value">Dev Kixan</span>
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head">
+                <span>Last updated</span>
+                <span class="guide-row-value"><time datetime="2026-11-01">Nov 1, 2026</time></span>
+              </p>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2 class="mt-8 border-t-2 border-snake-ink pt-4 text-2xl font-bold leading-tight">Advertising</h2>
-        <p>
-          Supported native mobile versions of the app may show Google Mobile Ads
-          banner ads and optional rewarded ads. Banner ads may appear in the menu
-          or after a game ends. A rewarded ad is shown only after you choose to
-          watch one to unlock an in-game item or continue a game. Ads need an
-          internet connection; the game remains playable offline when ads are
-          unavailable or you choose not to watch a rewarded ad.
-        </p>
-        <p>
-          To deliver, measure, secure, and, where permitted, personalize ads,
-          Google and its advertising partners may process your IP address, device
-          and operating-system details, app version, advertising identifier,
-          general location inferred from IP address, ad interactions, and
-          diagnostic or fraud-prevention information. The information processed
-          and the ads shown can vary by device, region, and your privacy choices.
-          We do not use Google Analytics or a separate analytics service in the
-          app.
-        </p>
-        <p>
-          Learn more about Google’s data practices in the
-          <a class="font-bold underline" href="https://policies.google.com/technologies/partner-sites">information Google receives from apps that use its services</a>
-          and the <a class="font-bold underline" href="https://policies.google.com/privacy">Google Privacy Policy</a>.
-        </p>
-      </section>
+        <section class="guide-card" aria-labelledby="privacy-device">
+          <h2 id="privacy-device" class="guide-card-title">
+            Your data <span class="guide-card-index" aria-hidden="true">02</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-head">
+                <span>Stored</span>
+                <span class="guide-row-value">On device</span>
+              </p>
+              <p class="guide-row-text">
+                The app saves gameplay preferences, unlocked themes and filters,
+                sound and vibration choices, selected game settings, and high
+                scores locally on your device. This information is used only to
+                remember your choices and game progress. We do not receive this
+                local game information on our servers.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head"><span>Removing it</span></p>
+              <p class="guide-row-text">
+                You can remove this information by clearing the app&rsquo;s data
+                or uninstalling it. For a browser version, clear the site data in
+                your browser. This may reset your saved preferences, unlocked
+                items, and scores.
+              </p>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2 class="mt-8 border-t-2 border-snake-ink pt-4 text-2xl font-bold leading-tight">Your choices</h2>
-        <p>
-          Where required by law, the app presents an advertising consent message
-          before requesting ads. When available, use the app’s <strong>Privacy choices</strong>
-          option in the main menu to review or change your advertising-consent
-          choices. You can also manage advertising settings through your device
-          settings or Google account settings where supported.
-        </p>
-      </section>
+        <section class="guide-card" aria-labelledby="privacy-ads">
+          <h2 id="privacy-ads" class="guide-card-title">
+            Advertising <span class="guide-card-index" aria-hidden="true">03</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-head">
+                <span>Ads</span>
+                <span class="guide-row-value">Google Mobile Ads</span>
+              </p>
+              <p class="guide-row-text">
+                Supported native mobile versions of the app may show banner ads
+                and optional rewarded ads. Banner ads may appear in the menu or
+                after a game ends. A rewarded ad is shown only after you choose
+                to watch one to unlock an in-game item or continue a game.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head">
+                <span>Offline</span>
+                <span class="guide-row-value">Still playable</span>
+              </p>
+              <p class="guide-row-text">
+                Ads need an internet connection; the game remains playable
+                offline when ads are unavailable or you choose not to watch a
+                rewarded ad.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head"><span>What Google processes</span></p>
+              <p class="guide-row-text">
+                To deliver, measure, secure, and, where permitted, personalize
+                ads, Google and its advertising partners may process your IP
+                address, device and operating-system details, app version,
+                advertising identifier, general location inferred from IP
+                address, ad interactions, and diagnostic or fraud-prevention
+                information. The information processed and the ads shown can vary
+                by device, region, and your privacy choices.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head">
+                <span>Analytics</span>
+                <span class="guide-row-value">None</span>
+              </p>
+              <p class="guide-row-text">
+                We do not use Google Analytics or a separate analytics service in
+                the app.
+              </p>
+            </li>
+          </ul>
+          <a
+            class="guide-link"
+            href="https://policies.google.com/technologies/partner-sites"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            How Google uses app data
+            <span class="sr-only">(opens in a new tab)</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true">
+              <path d="M6 3h7v7M13 3L4 12" />
+            </svg>
+          </a>
+          <a
+            class="guide-link"
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Privacy Policy
+            <span class="sr-only">(opens in a new tab)</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true">
+              <path d="M6 3h7v7M13 3L4 12" />
+            </svg>
+          </a>
+        </section>
 
-      <section>
-        <h2 class="mt-8 border-t-2 border-snake-ink pt-4 text-2xl font-bold leading-tight">Retention and deletion</h2>
-        <p>
-          Local game information remains on your device until you clear the app’s
-          data or uninstall the app. Advertising-related information is handled by
-          Google under its own policies. The developer does not provide user
-          accounts or maintain a separate database of player profiles.
-          Advertising providers may process information in countries other than
-          the one where you live.
-        </p>
-      </section>
+        <section class="guide-card" aria-labelledby="privacy-choices">
+          <h2 id="privacy-choices" class="guide-card-title">
+            Your choices <span class="guide-card-index" aria-hidden="true">04</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-head"><span>Consent</span></p>
+              <p class="guide-row-text">
+                Where required by law, the app presents an advertising consent
+                message before requesting ads. When available, use the
+                app&rsquo;s <strong>Privacy choices</strong> option in the main
+                menu to review or change your advertising-consent choices.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head"><span>Device settings</span></p>
+              <p class="guide-row-text">
+                You can also manage advertising settings through your device
+                settings or Google account settings where supported.
+              </p>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2 class="mt-8 border-t-2 border-snake-ink pt-4 text-2xl font-bold leading-tight">Children’s privacy</h2>
-        <p>
-          The app does not knowingly ask users to provide personal information.
-          If you believe a child has provided personal information directly to the
-          developer, please get in touch using the contact details below.
-        </p>
-      </section>
+        <section class="guide-card" aria-labelledby="privacy-retention">
+          <h2 id="privacy-retention" class="guide-card-title">
+            Retention <span class="guide-card-index" aria-hidden="true">05</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-head">
+                <span>Game data</span>
+                <span class="guide-row-value">Until cleared</span>
+              </p>
+              <p class="guide-row-text">
+                Local game information remains on your device until you clear the
+                app&rsquo;s data or uninstall the app. The developer does not
+                provide user accounts or maintain a separate database of player
+                profiles.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head"><span>Ad data</span></p>
+              <p class="guide-row-text">
+                Advertising-related information is handled by Google under its
+                own policies. Advertising providers may process information in
+                countries other than the one where you live.
+              </p>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2 class="mt-8 border-t-2 border-snake-ink pt-4 text-2xl font-bold leading-tight">Your privacy rights</h2>
-        <p>
-          Depending on where you live, you may have rights to request access to,
-          deletion of, correction of, or information about personal data that we
-          control. Because we do not collect or retain local game data on our
-          servers, clearing the app&rsquo;s data is normally the way to delete it. For
-          advertising-related data, use the privacy controls described above or
-          contact Google. You may also send us a request through the contact form
-          below; we will respond as required by applicable law.
-        </p>
-      </section>
+        <section class="guide-card" aria-labelledby="privacy-children">
+          <h2 id="privacy-children" class="guide-card-title">
+            Children <span class="guide-card-index" aria-hidden="true">06</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-text">
+                The app does not knowingly ask users to provide personal
+                information. If you believe a child has provided personal
+                information directly to the developer, please get in touch using
+                the contact details below.
+              </p>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2 class="mt-8 border-t-2 border-snake-ink pt-4 text-2xl font-bold leading-tight">Changes to this policy</h2>
-        <p>
-          This policy may be updated when the app or its services change. The
-          latest version will be available at this page, with its revision date.
-        </p>
-      </section>
+        <section class="guide-card" aria-labelledby="privacy-rights">
+          <h2 id="privacy-rights" class="guide-card-title">
+            Your rights <span class="guide-card-index" aria-hidden="true">07</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-text">
+                Depending on where you live, you may have rights to request
+                access to, deletion of, correction of, or information about
+                personal data that we control.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head"><span>Game data</span></p>
+              <p class="guide-row-text">
+                Because we do not collect or retain local game data on our
+                servers, clearing the app&rsquo;s data is normally the way to
+                delete it.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head"><span>Ad data</span></p>
+              <p class="guide-row-text">
+                For advertising-related data, use the privacy controls described
+                above or contact Google.
+              </p>
+            </li>
+            <li class="guide-row">
+              <p class="guide-row-head"><span>Requests</span></p>
+              <p class="guide-row-text">
+                You may also send us a request through the contact form below; we
+                will respond as required by applicable law.
+              </p>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2 class="mt-8 border-t-2 border-snake-ink pt-4 text-2xl font-bold leading-tight">Contact</h2>
-        <p>
-          For support, privacy questions, or data-related requests, send us a
-          message through the <a class="font-bold underline" href="contact.html">Contact us form</a>.
-        </p>
-      </section>
+        <section class="guide-card" aria-labelledby="privacy-changes">
+          <h2 id="privacy-changes" class="guide-card-title">
+            Changes <span class="guide-card-index" aria-hidden="true">08</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-text">
+                This policy may be updated when the app or its services change.
+                The latest version will be available at this page, with its
+                revision date.
+              </p>
+            </li>
+          </ul>
+        </section>
 
-      <div class="mt-8 border-t-2 border-snake-ink pt-4">
-        <button
-          type="button"
-          class="cursor-pointer border-2 border-snake-ink bg-transparent px-3 py-2 font-bold text-snake-ink hover:bg-snake-ink hover:text-snake-screen"
-          @click="navigator.clipboard.writeText(window.location.href).then(() => copied = true)"
-          x-text="copied ? 'Page link copied' : 'Copy page link'"
-        >Copy page link</button>
-      </div>
+        <section class="guide-card" aria-labelledby="privacy-contact">
+          <h2 id="privacy-contact" class="guide-card-title">
+            Contact <span class="guide-card-index" aria-hidden="true">09</span>
+          </h2>
+          <ul class="guide-rows">
+            <li class="guide-row">
+              <p class="guide-row-text">
+                For support, privacy questions, or data-related requests, send us
+                a message through the contact form.
+              </p>
+            </li>
+          </ul>
+          <a class="guide-link" href="contact.html">
+            Contact us
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true">
+              <path d="M6 3h7v7M13 3L4 12" />
+            </svg>
+          </a>
+          <button
+            type="button"
+            class="guide-link"
+            @click="navigator.clipboard.writeText(window.location.href).then(() => copied = true)"
+          >
+            <span x-text="copied ? 'Page link copied' : 'Copy page link'" aria-live="polite">Copy page link</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true">
+              <rect x="5" y="5" width="8" height="8" />
+              <path d="M3 10V3h7" />
+            </svg>
+          </button>
+        </section>
+      </article>
     </main>
   </body>
 </html>
