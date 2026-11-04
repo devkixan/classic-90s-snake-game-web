@@ -23,7 +23,7 @@ jobs:
       - name: Prepare Pages files
         run: |
           mkdir site
-          cp index.html privacy-policy.html contact.html site/
+          cp index.html privacy-policy.html contact.html app-ads.txt site/
           cp -R assets site/assets
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
